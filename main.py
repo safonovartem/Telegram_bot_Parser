@@ -10,5 +10,10 @@ def parser(url):
 
 list_of_jokes = parser(URL)
 print(list_of_jokes)
-trach = list_of_jokes.pop(0)
+#list_of_jokes = len(list_of_jokes)
+#print(list_of_jokes)
+del list_of_jokes[8]#Надо придумать как подчистить список
+#Clean_list_of_jokes =
+
 print(list_of_jokes)
+
