@@ -1,25 +1,9 @@
 import requests
-from bs4 import BeautifulSoup as b
-import telebot
-from telebot import types
-URL = "https://www.afisha.ru/tver/"
-def parser(url):
-    r = requests.get(url)
-    soup = b(r.text, 'html.parser')  # Парсинг
-    Text_for_films = soup.find_all('div', class_="LiSqu VYIMx UCALF")
-    return [c.text for c in Text_for_films]
-
-
-list_of_jokes = parser(URL)
-del list_of_jokes[8:20]
-#bot.send_message(message.chat.id, list_of_jokes, parse_mode="html")
-
-import requests
 import os
 from tqdm import tqdm
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin, urlparse
-
+url = 'https://www.afisha.ru/tver/events/na-segodnya/'
 
 def is_valid(url):
     """
