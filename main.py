@@ -9,16 +9,17 @@ def parser(url):
     return [c.text for c in Text_for_films]
 
 Text_for_films = parser(URL)
+Test_spisok = ['Мама пошла в театр']
 Trach_words = ['События', 'Кино', 'Театр', 'Концерты', 'Дети', 'Об «Афише»', 'О нас', 'Проекты', 'Еще', '«Афиша» в соц. сетях', 'Мобильное приложение «Афиши» — самый удобный способ выбрать, как провести свободное время', 'Рассылка «Афиши»: главные события недели — у вас на почте']
 
-def remove_common(Text_for_films):
-    for i in range(len(Text_for_films)):
+def remove_common(Test_spisok, Trach_words):
+    for i in range(len(Test_spisok)):
         for j in range(len(Trach_words)):
-            if j in Text_for_films:
-                Text_for_films.remove(j)
+            if j in Test_spisok:
+                Test_spisok.remove(j)
 
 
-print("list1 : ", Text_for_films)
+print("list1 : ", Test_spisok)
 print("list2 : ", Trach_words)
 
 #def remove(Text_for_films, Trach_words):
